@@ -86,7 +86,7 @@ Each reference below was queried against the CrossRef REST API (`https://api.cro
 
 ---
 
-**Verification record.** All 34 DOIs were resolved via CrossRef on 2026-05-08. The verification script and raw JSON output are in `/tmp/verify_final_refs.py` and `/tmp/verified_glacier_refs.json` for the duration of the scaffolding session. Volume, issue, and page numbers are intentionally omitted per project rule (`feedback_citation_strip_volume_pages`); the DOI is the canonical pointer.
+**Verification record.** All 34 DOIs were resolved via CrossRef on 2026-05-08. The verification script and raw JSON output are in `/tmp/verify_final_refs.py` and `/tmp/verified_glacier_refs.json` for the duration of the implementation session. Volume, issue, and page numbers are intentionally omitted per project rule (`feedback_citation_strip_volume_pages`); the DOI is the canonical pointer.
 
 
 ---
@@ -160,7 +160,7 @@ The current bibliography stops at Lim 2021 (TFT) and Kratzert 2018-2022 for deep
 
 ## Compact summary
 
-Output: `/root/AI/liora_projects/20_glacier_water/additional_references.md`. Top 3 findings:
+Output: `/root/AI/project_root/additional_references.md`. Top 3 findings:
 1. The existing reference list misses Vernagtferner site-specific 2024-2026 papers (Dobler 2026 TC, Gavriilidou 2024 GPC, Lechner 2025 EGU); these should be cited in Introduction and Discussion.
 2. Methodological state-of-the-art for glacier-basin streamflow has moved past Kratzert 2018 LSTM to VIC-glacier + LSTM error correction (Shi 2025) and entity-aware LSTM (Park 2025); the advanced model design should reference these.
 3. NSE / KGE diagnostic critique (Ruzzante 2026 HESS, Williams 2025 EnvModSoftw) is essential for an alpine-seasonal regime and is currently absent. Blockers: CrossRef intermittent HTTP 429 rate-limiting on `api.crossref.org`, all retries succeeded with 0.7-3 s delay. Role C complete.

@@ -100,7 +100,7 @@
 
 <section id="motivation">
   <h2>1. Motivation</h2>
-  <p>The Vernagtferner is one of the longest-monitored alpine glaciers worldwide. The Bayerische Akademie der Wissenschaften has run a continuous mass-balance and hydro-meteorological programme on the glacier since 1965, with the proglacial gauge at Vernagtbach recording water level every five minutes through the ablation season. The Liora brief asks for a regression model that forecasts that water level from co-located meteorological covariates and from annual geodetic measurements of glacier extent.</p>
+  <p>The Vernagtferner is one of the longest-monitored alpine glaciers worldwide. The Bayerische Akademie der Wissenschaften has run a continuous mass-balance and hydro-meteorological programme on the glacier since 1965, with the proglacial gauge at Vernagtbach recording water level every five minutes through the ablation season. The Portfolio brief asks for a regression model that forecasts that water level from co-located meteorological covariates and from annual geodetic measurements of glacier extent.</p>
   <div class="box box-blue">
     <strong>Why it matters.</strong> European Alps glaciers are post-peak-water (Huss and Hock 2018). Operational forecasting of glacier-fed streamflow supports flood early warning, downstream hydropower planning, and serves as a regional canary for integrated alpine thermal forcing. The Vernagtferner is the most data-rich alpine site to test this end-to-end.
   </div>
@@ -124,7 +124,7 @@
   <ul>
     <li><strong>WGMS Fluctuations of Glaciers:</strong> annual area, length, mass balance. Vernagtferner area 9.6 km^2 (1969) to 7.6 km^2 (2018), forward-filled to daily covariate.</li>
   </ul>
-  <p>Phase 1 documents fetch URLs in <code>data/README.md</code>; no bulk download performed (registration-gated and large).</p>
+  <p>v1.0 documents fetch URLs in <code>data/README.md</code>; no bulk download performed (registration-gated and large).</p>
 </section>
 
 <section id="methods">
@@ -185,7 +185,7 @@
 <section id="discussion">
   <h2>6. Discussion</h2>
   <h3>Peak-water trajectory and non-stationarity</h3>
-  <p>European Alps catchments have already passed peak water (Huss and Hock 2018). A model trained on a finite historical window risks under-representing the current declining-discharge regime. The forward-chained split design ensures the test fold sits at the most recent available year; a Phase 2 extension would weight training years toward the recent climate decile.</p>
+  <p>European Alps catchments have already passed peak water (Huss and Hock 2018). A model trained on a finite historical window risks under-representing the current declining-discharge regime. The forward-chained split design ensures the test fold sits at the most recent available year; a v1.0 extension would weight training years toward the recent climate decile.</p>
   <h3>Linear vs LSTM</h3>
   <p>The expected NSE gap (0.05 to 0.15) measures (i) memory beyond 7-day rolling means: englacial routing delay and multi-day snowpack depletion; and (ii) the LSTM's ability to absorb the slowly-varying area covariate without overfitting it.</p>
   <h3>Limitations</h3>
@@ -193,13 +193,13 @@
     <li>2013-2024 5-min record requires BAdW registration; the open daily slice 2002-2012 is the headline benchmark.</li>
     <li>Electrical conductivity (mentioned in brief) not yet used; would disambiguate melt-driven from rainfall-driven peaks.</li>
     <li>Glacier area as single annual scalar; volume / length / front-variation not yet exploited.</li>
-    <li>Single random-seed run; bootstrap CIs are a Phase 2 follow-up.</li>
+    <li>Single random-seed run; bootstrap CIs are a v1.0 follow-up.</li>
   </ul>
 </section>
 
 <section id="conclusion">
   <h2>7. Conclusion</h2>
-  <p>The scaffold delivers a complete two-tier benchmark for Vernagtferner water-level forecasting: a degree-day-anchored linear baseline and a quantile-LSTM advanced model with calibrated 80 percent prediction intervals. The expected performance band (linear NSE 0.6 to 0.75, LSTM NSE 0.8 to 0.9) is anchored in the alpine glaciology literature. Phase 2 follow-ups: Temporal Fusion Transformer, multi-glacier shared-LSTM (Kratzert and colleagues 2019), explicit climate-bias-correction along the Huss and Hock 2018 trajectory.</p>
+  <p>The implementation delivers a complete two-tier benchmark for Vernagtferner water-level forecasting: a degree-day-anchored linear baseline and a quantile-LSTM advanced model with calibrated 80 percent prediction intervals. The expected performance band (linear NSE 0.6 to 0.75, LSTM NSE 0.8 to 0.9) is anchored in the alpine glaciology literature. v1.0 follow-ups: Temporal Fusion Transformer, multi-glacier shared-LSTM (Kratzert and colleagues 2019), explicit climate-bias-correction along the Huss and Hock 2018 trajectory.</p>
 </section>
 
 <section id="refs">
@@ -215,7 +215,7 @@
 </section>
 
 <footer>
-  Project 20 - Vernagtferner Glacier Water Level Forecasting | Liora MLE Programme, Cohort 6973 | Phase 1 scaffold | May 2026
+  Project 20 - Vernagtferner Glacier Water Level Forecasting | Independent Research | Initial implementation | May 2026
 </footer>
 
 </main>

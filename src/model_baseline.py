@@ -1,6 +1,6 @@
 """Baseline model: linear regression with seasonal and lagged climate features.
 
-Project 20 - Vernagtferner Glacier Water Level Forecasting (Liora Phase 1).
+Project 20 - Vernagtferner Glacier Water Level Forecasting (Project layout
 
 The baseline is intentionally simple and physically motivated:
   - Daily aggregation of the 5-minute hydro-met record.
@@ -10,7 +10,7 @@ The baseline is intentionally simple and physically motivated:
   - Snow-depth and global-radiation covariates when available.
   - Diagnostics: NSE, KGE, RMSE, MAE, residual ACF, residual QQ.
 
-This script is NOT executed in Phase 1. The main session runs:
+This script is NOT executed in v1.0. The main session runs:
     python src/model_baseline.py
 once data has been downloaded into ../data/raw/.
 """

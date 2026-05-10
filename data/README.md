@@ -1,6 +1,6 @@
 # Data sources - Vernagtferner glacier water-level forecasting
 
-The brief points at three classes of public datasets. None of them ships as a single bulk download; each requires per-source registration or per-record fetching. **No bulk download performed in Phase 1.** This file documents the URLs, the formats, and the exact access pattern so the main session can pull what is needed at execution time.
+The brief points at three classes of public datasets. None of them ships as a single bulk download; each requires per-source registration or per-record fetching. **No bulk download performed in v1.0.** This file documents the URLs, the formats, and the exact access pattern so the main session can pull what is needed at execution time.
 
 ## Folder layout (created at fetch time)
 
@@ -88,9 +88,9 @@ data/
 - Access: free academic account, then per-request CSV by email or download. Not bulk-fetchable.
 - Use case: cross-border meteorological covariates for ablation-season modelling.
 
-## Size and download policy (per Liora rules)
+## Size and download policy (per Portfolio rules)
 
-| Source | Estimated size | Download in Phase 1? |
+| Source | Estimated size | Download in v1.0? |
 |--------|---------------|----------------------|
 | PANGAEA 829530 (daily 2002-2012) | < 5 MB | document only - main session pulls when modelling |
 | BAdW 5-min 2013-2024 | ~ 1-2 GB raw | document only - registration-gated |

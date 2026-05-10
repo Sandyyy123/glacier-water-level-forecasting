@@ -1,14 +1,14 @@
 """Advanced model: LSTM (sequence-to-one) with quantile heads for water-level forecasting.
 
-Project 20 - Vernagtferner Glacier Water Level Forecasting (Liora Phase 1).
+Project 20 - Vernagtferner Glacier Water Level Forecasting (Project layout
 
 Architecture follows Kratzert and colleagues 2018 (HESS) for the LSTM rainfall-runoff
 backbone, extended with three quantile output heads (0.1, 0.5, 0.9) trained jointly
 under the pinball loss for prediction intervals on the high-flow tail. Optional
 Temporal Fusion Transformer variant is sketched at the end of this file as a
-Phase 2 follow-up (Lim and colleagues 2021, IJF).
+v1.0 follow-up (Lim and colleagues 2021, IJF).
 
-This script is NOT executed in Phase 1. The main session runs:
+This script is NOT executed in v1.0. The main session runs:
     python src/model_advanced.py
 once data has been downloaded into ../data/raw/ and processed.
 
@@ -32,7 +32,7 @@ try:
     import torch
     import torch.nn as nn
     from torch.utils.data import DataLoader, Dataset
-except ImportError:  # torch optional at scaffold time
+except ImportError:  # torch optional at implementation time
     torch = None  # type: ignore
     nn = None  # type: ignore
 
@@ -313,7 +313,7 @@ def main():
 
 
 # ---------------------------------------------------------------------------
-# Phase 2 sketch: Temporal Fusion Transformer variant
+# v1.0 sketch: Temporal Fusion Transformer variant
 # ---------------------------------------------------------------------------
 # from pytorch_forecasting import TemporalFusionTransformer, TimeSeriesDataSet
 # Multi-horizon (1, 7, 30 day) forecasts with attention weights over climate
