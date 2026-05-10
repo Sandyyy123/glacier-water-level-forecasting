@@ -1,4 +1,4 @@
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Environmental ML](https://img.shields.io/badge/Environmental-ML-green) ![License](https://img.shields.io/badge/license-MIT-lightgrey)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Environmental ML](https://img.shields.io/badge/Environmental-ML-green) ![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)
 
 # Vernagtferner Glacier Water Level Forecasting
 
