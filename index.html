@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Glacier Water Level Forecasting — Sandeep Grover</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
@@ -42,81 +41,32 @@ footer{text-align:center;padding:32px;color:var(--muted);font-size:.82rem;border
 </style>
 </head>
 <body>
-
 <nav>
   <a href="https://sandyyy123.github.io" class="nav-back">← Portfolio</a>
   <span class="nav-title">Glacier Water Level Forecasting</span>
   <a href="https://github.com/Sandyyy123/glacier-water-level-forecasting" target="_blank" class="nav-back" style="margin-left:auto">GitHub ↗</a>
 </nav>
-
 <div class="hero">
   <h1>Glacier Water Level Forecasting</h1>
   <p>Daily meltwater runoff forecasting for Vernagtferner glacier using LSTM on multivariate meteorological sequences and LightGBM with lag/calendar features.</p>
   <div class="badges"><span class="badge">PyTorch LSTM</span> <span class="badge">LightGBM</span> <span class="badge">climate modelling</span></div>
   <div class="metric-bar">✦ Walk-forward · climate-trend modelling</div>
 </div>
-
 <div class="card">
   <div class="section-title">Interactive Demo</div>
   <div class="highlight">Vernagtferner glacier | LSTM + LightGBM ensemble</div>
-  <p style="font-size:.82rem;color:#94a3b8;margin-bottom:16px">Meltwater Runoff Forecast (m³/s)</p>
-  <div class="demo-container">
-<canvas id="myChart"></canvas>
-<script>
-new Chart(document.getElementById('myChart'), {
-  type: 'line',
-  data: {
-    labels: ["Jun", "Jul-W1", "Jul-W2", "Aug-W1", "Aug-W2", "Sep-W1", "Sep-W2", "Oct"],
-    datasets: [
-      {
-        label: 'LSTM Forecast',
-        data: [12.3, 28.7, 41.2, 38.9, 35.1, 24.8, 16.2, 8.9],
-        borderColor: 'rgba(99,102,241,0.9)',
-        backgroundColor: 'rgba(99,102,241,0.08)',
-        fill: true,
-        tension: 0.35,
-        pointRadius: 3,
-        borderWidth: 2.5
-      },
-      {
-        label: 'Measured Runoff',
-        data: [11.8, 27.4, 39.8, 40.1, 33.7, 25.9, 17.1, 9.4],
-        borderColor: 'rgba(148,163,184,0.55)',
-        backgroundColor: 'transparent',
-        borderDash: [5,4],
-        tension: 0.35,
-        pointRadius: 2,
-        borderWidth: 1.5
-      }
-    ]
-  },
-  options: {
-    responsive: true,
-    interaction: { intersect: false, mode: 'index' },
-    plugins: {
-      legend: { labels: { color: '#94a3b8', font: { size: 12 } } },
-      tooltip: { backgroundColor: 'rgba(15,17,32,0.95)', borderColor: 'rgba(99,102,241,0.3)', borderWidth: 1 }
-    },
-    scales: {
-      y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8' } },
-      x: { grid: { display: false }, ticks: { color: '#94a3b8', maxTicksLimit: 12 } }
-    }
-  }
-});
-</script></div>
-  <div class="stats-grid"><div class="stat-box"><span class="stat-value">Vernagtferner</span><span class="stat-label">Glacier</span></div><div class="stat-box"><span class="stat-value">0.847</span><span class="stat-label">NSE Score</span></div><div class="stat-box"><span class="stat-value">2.3 m³/s</span><span class="stat-label">RMSE</span></div><div class="stat-box"><span class="stat-value">7-day ahead</span><span class="stat-label">Horizon</span></div></div>
+  <p style="font-size:.82rem;color:#94a3b8;margin-bottom:16px">Meltwater Runoff Forecast (m3/s)</p>
+  <div class="demo-container"><canvas id="myChart"></canvas><script>
+new Chart(document.getElementById('myChart'),{type:'line',data:{labels:["Jun", "Jul-W1", "Jul-W2", "Aug-W1", "Aug-W2", "Sep-W1", "Sep-W2", "Oct"],datasets:[{label:'LSTM Forecast',data:[12.3, 28.7, 41.2, 38.9, 35.1, 24.8, 16.2, 8.9],borderColor:'rgba(99,102,241,0.9)',backgroundColor:'rgba(99,102,241,0.08)',fill:true,tension:0.35,pointRadius:3,borderWidth:2.5},{label:'Measured Runoff',data:[11.8, 27.4, 39.8, 40.1, 33.7, 25.9, 17.1, 9.4],borderColor:'rgba(148,163,184,0.55)',backgroundColor:'transparent',borderDash:[5,4],tension:0.35,pointRadius:2,borderWidth:1.5}]},options:{responsive:true,interaction:{intersect:false,mode:'index'},plugins:{legend:{labels:{color:'#94a3b8'}},tooltip:{backgroundColor:'rgba(15,17,32,0.95)',borderColor:'rgba(99,102,241,0.3)',borderWidth:1}},scales:{y:{grid:{color:'rgba(255,255,255,0.05)'},ticks:{color:'#94a3b8'}},x:{grid:{display:false},ticks:{color:'#94a3b8',maxTicksLimit:10}}}}});</script></div>
+  <div class="stats-grid"><div class="stat-box"><span class="stat-value">Vernagtferner</span><span class="stat-label">Glacier</span></div><div class="stat-box"><span class="stat-value">0.847</span><span class="stat-label">NSE Score</span></div><div class="stat-box"><span class="stat-value">2.3 m3/s</span><span class="stat-label">RMSE</span></div><div class="stat-box"><span class="stat-value">7-day ahead</span><span class="stat-label">Horizon</span></div></div>
 </div>
-
 <div class="card">
   <div class="section-title">Tech Stack</div>
   <div class="badges" style="margin-bottom:0"><span class="badge">PyTorch LSTM</span> <span class="badge">LightGBM</span> <span class="badge">climate modelling</span></div>
 </div>
-
 <footer>
-  <p>Built by <a href="https://sandyyy123.github.io">Sandeep Grover</a> ·
-     <a href="https://github.com/Sandyyy123/glacier-water-level-forecasting" target="_blank">GitHub Repo</a> ·
-     <a href="https://linkedin.com/in/sandeep-grover-b3192a16" target="_blank">LinkedIn</a></p>
+  <p>Built by <a href="https://sandyyy123.github.io">Sandeep Grover</a> &nbsp;·&nbsp;
+     <a href="https://github.com/Sandyyy123/glacier-water-level-forecasting" target="_blank">View on GitHub</a></p>
 </footer>
-
 </body>
 </html>
